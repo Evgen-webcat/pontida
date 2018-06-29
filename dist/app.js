@@ -104,7 +104,7 @@ eval("$(document).ready(function () {\r\n    'use strict'\r\n\r\n    $('.main-me
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    $('.filter_button').click(function (event) {\r\n        event.preventDefault();\r\n        var index = $(this).parent().index();\r\n        $(this).toggleClass('filter_button_open');\r\n        $('.filters_sub-menu').eq(index).slideToggle('fast');\r\n    });\r\n});\n\n//# sourceURL=webpack:///./js/app/filter.js?");
+eval("$(document).ready(function () {\r\n    $('.filter_button').click(function (event) {\r\n        event.preventDefault();\r\n        var index = $(this).parent().index();\r\n        $(this).toggleClass('filter_button_open');\r\n        $('.filters_sub-menu').eq(index).slideToggle('fast');\r\n    });\r\n});\r\n\n\n//# sourceURL=webpack:///./js/app/filter.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("$(document).ready(function () {\r\n    $('.filter_button').click(function 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    var mapBlock = document.getElementById('map');\r\n    \r\n    if (mapBlock) {\r\n    ymaps.ready(init);\r\n    var map,\r\n        Placemark;\r\n\r\n    function init() {\r\n        map = new ymaps.Map(\"map\", {\r\n            center: [53.92507307064044,27.60454599999995],\r\n            zoom: 17\r\n        });\r\n        \r\n        Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], { \r\n            hintContent: 'Pontida', \r\n            balloonContent: 'Pontida' \r\n        }, {\r\n            iconLayout: 'default#image',\r\n            iconImageHref: 'img/placemark.png',\r\n            iconImageSize: [18, 24]\r\n        });\r\n        \r\n         map.geoObjects.add(Placemark);\r\n    }\r\n}\r\n});\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
+eval("$(document).ready(function () {\r\n    var mapBlock = document.getElementById('map');\r\n\r\n    if (mapBlock) {\r\n    ymaps.ready(init);\r\n    var map,\r\n        Placemark;\r\n\r\n    function init() {\r\n        map = new ymaps.Map(\"map\", {\r\n            center: [53.92507307064044,27.60454599999995],\r\n            zoom: 17\r\n        });\r\n\r\n        Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], {\r\n            hintContent: 'Pontida',\r\n            balloonContent: 'Pontida'\r\n        }, {\r\n            iconLayout: 'default#image',\r\n            iconImageHref: 'img/placemark.png',\r\n            iconImageSize: [18, 24]\r\n        });\r\n\r\n         map.geoObjects.add(Placemark);\r\n    }\r\n}\r\n});\r\n\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
 
 /***/ }),
 

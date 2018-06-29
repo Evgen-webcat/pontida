@@ -1,3 +1,4 @@
 window.jQuery = window.$ = require('jquery');
-window.ymaps = require('ymaps').defaults;
-window.jquery.maskedinput = require('jquery.maskedinput');
+require('slick-carousel');
+require('./jquery.maskedinput.min.js');
+//window.mask = require('jquery.maskedinput');
