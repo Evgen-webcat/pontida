@@ -25,6 +25,20 @@ $(document).ready(function () {
         });
     }
 
+    var productSlider = document.getElementById('product_slider');
+    if (productSlider) {
+        $('.product_slider').slick({
+            dots: true,
+            fade: true,
+            asNavFor: '.product_slider-nav'
+        });
+        $('.product_slider-nav').slick({
+            slidesToShow: 4,
+            asNavFor: '.product_slider',
+            focusOnSelect: true
+        });
+    }
+
     var scrollHere = document.getElementById('scrollHere');
 
     if (scrollHere) {
