@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    'use strict'\r\n\r\n    $('.main-menu-button').click(function (event) {\r\n        event.preventDefault();\r\n        $(this).toggleClass('button-menu-open');\r\n        $('.main-menu').slideToggle();\r\n    });\r\n\r\n    $('.phone-input').mask('+375(99) 999-99-99');\r\n\r\n    var slider = document.getElementById('slick-slider');\r\n    if (slider) {\r\n        $('.slick-slider').slick({\r\n            autoplay: true,\r\n            dots: true,\r\n            appendDots: $('.dots'),\r\n            responsive: [\r\n                {\r\n                    breakpoint: 768,\r\n                    settings: {\r\n                        arrows: false\r\n                    }\r\n    }]\r\n        });\r\n    }\r\n\r\n    var scrollHere = document.getElementById('scrollHere');\r\n\r\n    if (scrollHere) {\r\n        $('.mouse-button').click(function (event) {\r\n            event.preventDefault();\r\n            var scrollTo = $('#scrollHere').offset().top;\r\n            $('html, body').animate({\r\n                scrollTop: scrollTo\r\n            }, 500);\r\n        });\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack:///./js/app/app.js?");
+eval("$(document).ready(function () {\n    'use strict'\n\n    $('.main-menu-button').click(function (event) {\n        event.preventDefault();\n        $(this).toggleClass('button-menu-open');\n        $('.main-menu').slideToggle();\n    });\n\n    $('.phone-input').mask('+375(99) 999-99-99');\n\n    var slider = document.getElementById('slick-slider');\n    if (slider) {\n        $('.slick-slider').slick({\n            autoplay: true,\n            dots: true,\n            appendDots: $('.dots'),\n            responsive: [\n                {\n                    breakpoint: 768,\n                    settings: {\n                        arrows: false\n                    }\n    }]\n        });\n    }\n\n    var scrollHere = document.getElementById('scrollHere');\n\n    if (scrollHere) {\n        $('.mouse-button').click(function (event) {\n            event.preventDefault();\n            var scrollTo = $('#scrollHere').offset().top;\n            $('html, body').animate({\n                scrollTop: scrollTo\n            }, 500);\n        });\n    }\n});\n\n\n//# sourceURL=webpack:///./js/app/app.js?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("$(document).ready(function () {\r\n    'use strict'\r\n\r\n    $('.main-me
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    $('.filter_button').click(function (event) {\r\n        event.preventDefault();\r\n        var index = $(this).parent().index();\r\n        $(this).toggleClass('filter_button_open');\r\n        $('.filters_sub-menu').eq(index).slideToggle('fast');\r\n    });\r\n});\r\n\n\n//# sourceURL=webpack:///./js/app/filter.js?");
+eval("$(document).ready(function () {\n    $('.filter_button').click(function (event) {\n        event.preventDefault();\n        var index = $(this).parent().index();\n        $(this).toggleClass('filter_button_open');\n        $('.filters_sub-menu').eq(index).slideToggle('fast');\n    });\n});\n\n\n//# sourceURL=webpack:///./js/app/filter.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("$(document).ready(function () {\r\n    $('.filter_button').click(function 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\r\n    var mapBlock = document.getElementById('map');\r\n\r\n    if (mapBlock) {\r\n    ymaps.ready(init);\r\n    var map,\r\n        Placemark;\r\n\r\n    function init() {\r\n        map = new ymaps.Map(\"map\", {\r\n            center: [53.92507307064044,27.60454599999995],\r\n            zoom: 17\r\n        });\r\n\r\n        Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], {\r\n            hintContent: 'Pontida',\r\n            balloonContent: 'Pontida'\r\n        }, {\r\n            iconLayout: 'default#image',\r\n            iconImageHref: 'img/placemark.png',\r\n            iconImageSize: [18, 24]\r\n        });\r\n\r\n         map.geoObjects.add(Placemark);\r\n    }\r\n}\r\n});\r\n\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
+eval("$(document).ready(function () {\n    var mapBlock = document.getElementById('map');\n\n    if (mapBlock) {\n    ymaps.ready(init);\n    var map,\n        Placemark;\n\n    function init() {\n        map = new ymaps.Map(\"map\", {\n            center: [53.92507307064044,27.60454599999995],\n            zoom: 17\n        });\n\n        Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], {\n            hintContent: 'Pontida',\n            balloonContent: 'Pontida'\n        }, {\n            iconLayout: 'default#image',\n            iconImageHref: 'img/placemark.png',\n            iconImageSize: [18, 24]\n        });\n\n         map.geoObjects.add(Placemark);\n    }\n}\n});\n\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
 
 /***/ }),
 
