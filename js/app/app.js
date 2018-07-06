@@ -35,7 +35,14 @@ $(document).ready(function () {
         $('.product_slider-nav').slick({
             slidesToShow: 4,
             asNavFor: '.product_slider',
-            focusOnSelect: true
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    }
+    }]
         });
     }
 

@@ -49,8 +49,12 @@ input[type=checkbox] {
     font-size: 0.6875rem;
     font-family: Montserrat-SemiBold;
     text-transform: uppercase;
-    color: #39393a;
-    background-color: #c2cbd2;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .2);
+    transition: all .3s;
+    &:hover {
+        background-color: rgba(255, 255, 255, .25);
+    }
     &::before,
     &::after {
         content: '';
@@ -60,7 +64,7 @@ input[type=checkbox] {
         display: block;
         width: 6px;
         height: 1px;
-        background-color: #39393a;
+        background-color: #fff;
         transform-origin: right;
     }
     &::before {
@@ -105,11 +109,9 @@ input[type=checkbox] {
             transform: translateY(-50%);
             &_caption {
                 position: relative;
-                transform: translateY(10vh);
                 font-size: 1.5rem;
                 font-family: Montserrat-Bold;
                 text-transform: uppercase;
-                transition: all .8s;
                 &::after {
                     content: '';
                     position: absolute;
@@ -122,16 +124,12 @@ input[type=checkbox] {
                     transform: translateX(-50%);
                 }
             }
-            &_img {
-                transform: translateY(10vh);
-                transition: all .8s;
-            }
             .info {
-                opacity: 0;
+                max-height: 0;
                 overflow: hidden;
                 padding: 0 10%;
                 box-sizing: border-box;
-                transition: all .8s;
+                transition: max-height 1.5s ease-out;
                 .brand-rooms {
                     position: relative;
                     margin-top: 50px;
@@ -171,16 +169,7 @@ input[type=checkbox] {
                     height: 50px;
                     line-height: 50px;
                     color: #fff;
-                    border: 2px solid #fff;
-                    background-color: rgba(255, 255, 255, .3);
-                    &::before,
-                    &::after {
-                        right: 10%;
-                        background-color: #fff;
-                    }
-                    &:hover {
-                        background-color: rgba(255, 255, 255, .5);
-                    }
+                    border: 1px solid #fff;
                 }
             }
         }
@@ -189,12 +178,8 @@ input[type=checkbox] {
                 opacity: .3;
             }
             .category-block_description {
-                &_caption,
-                &_img {
-                    transform: translateY(0);
-                }
                 .info {
-                    opacity: 1;
+                    max-height: 20vw;
                 }
             }
         }
@@ -309,7 +294,7 @@ input[type=checkbox] {
     width: 100%;
     height: 70px;
     line-height: 70px;
-    background-color: #2f2d2c;
+    background-color: rgba(47, 47, 47, .9);
     .logo-wrapper {
         float: left;
     }
@@ -399,10 +384,8 @@ input[type=checkbox] {
 }
 
 .main {
-    margin-top: 70px;
     .slider {
         position: relative;
-        margin-top: -70px;
         .slick-slider {
             line-height: 0;
             &_block {
@@ -440,9 +423,8 @@ input[type=checkbox] {
                 height: 55px;
                 line-height: 55px;
                 margin-top: 50px;
-                &:hover {
-                    background-color: darken(#c2cbd2, 10%);
-                }
+                color: #fff;
+                border: 1px solid #fff;
             }
         }
         .mouse-button {
@@ -492,15 +474,7 @@ input[type=checkbox] {
             height: 50px;
             line-height: 50px;
             color: #fff;
-            border: 2px solid #fff;
-            background-color: rgba(255, 255, 255, .3);
-            &::before,
-            &::after {
-                background-color: #fff;
-            }
-            &:hover {
-                background-color: rgba(255, 255, 255, .5);
-            }
+            border: 1px solid #fff;
         }
     }
     .info_blocks {
@@ -577,14 +551,10 @@ input[type=checkbox] {
                         height: 50px;
                         line-height: 50px;
                         color: #fff;
-                        border: 2px solid #fff;
-                        background-color: rgba(255, 255, 255, .3);
-                        &::before,
-                        &::after {
-                            background-color: #fff;
-                        }
+                        border: 1px solid #fff;
+                        background-color: rgba(255, 255, 255, .2);
                         &:hover {
-                            background-color: rgba(255, 255, 255, .5);
+                            background-color: rgba(255, 255, 255, .25);
                         }
                     }
                 }
@@ -592,17 +562,19 @@ input[type=checkbox] {
         }
     }
     .filter {
+        margin-top: 70px;
         padding: 50px 7%;
         width: 100%;
         box-sizing: border-box;
     }
     .brands_category {
-        margin-top: -1px;
+        margin-top: 70px;
         .info_paragraph {
             margin-top: 20px;
         }
     }
     .contacts-info {
+        margin-top: 70px;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -659,7 +631,7 @@ input[type=checkbox] {
     }
     .brand-header {
         position: relative;
-        padding: 100px 20%;
+        padding: 170px 20% 100px;
         text-align: center;
         background-color: #000;
         &_img {
@@ -681,19 +653,22 @@ input[type=checkbox] {
             }
         }
     }
+    .brand-filter {
+        margin-top: 0;
+    }
     .product {
         display: flex;
         justify-content: space-between;
         overflow: hidden;
         &_slider {
             width: 75%;
-            height: 500px;
+            height: 550px;
             &_block {
                 width: 100%;
                 height: 100%;
                 &_img {
                     width: 100%;
-                    height: 100%;
+                    height: 550px;
                     object-fit: cover;
                 }
             }
@@ -707,7 +682,7 @@ input[type=checkbox] {
         &_description {
             display: flex;
             align-items: center;
-            padding-left: 30px;
+            padding: 70px 0 0 30px;
             box-sizing: border-box;
             width: ~"calc(25% - 1px)";
             color: #2f2f2f;
@@ -738,6 +713,10 @@ input[type=checkbox] {
                 color: #2f2f2f;
                 font-size: .812rem;
                 font-family: Montserrat-Regular;
+                &:hover {
+                    opacity: .7;
+                    text-decoration: underline;
+                }
             }
             &_button {
                 margin-top: 20px;
@@ -746,10 +725,18 @@ input[type=checkbox] {
                 line-height: 50px;
                 color: #fff;
                 background-color: #2f2f2f;
+                &:hover {
+                    background-color: lighten(#2f2f2f, 10%);
+                }
+                &::before,
+                &::after {
+                    background-color: #fff;
+                }
             }
         }
     }
     .product_slider-nav {
+        margin-top: 1px;
         &_block {
             width: ~"calc(100% - 1px)" !important;
             background-color: #000;
@@ -864,7 +851,7 @@ input[type=checkbox] {
             }
             &_input,
             &_textarea {
-                border: 2px solid rgba(0, 0, 0, .15);
+                border: 1px solid rgba(0, 0, 0, .15);
                 &::placeholder {
                     color: #2b2229;
                     font-size: 0.9375rem;
@@ -874,7 +861,7 @@ input[type=checkbox] {
             }
             &_input:focus,
             &_textarea:focus {
-                border: 2px solid rgba(0, 0, 0, .5);
+                border: 1px solid rgba(0, 0, 0, .5);
                 &::placeholder {
                     opacity: 1;
                 }
