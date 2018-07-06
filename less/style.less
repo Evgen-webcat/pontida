@@ -106,7 +106,7 @@ input[type=checkbox] {
             width: 100%;
             color: #fff;
             text-align: center;
-            transform: translateY(-50%);
+            transform: translateY(-30%);
             &_caption {
                 position: relative;
                 font-size: 1.5rem;
@@ -124,12 +124,20 @@ input[type=checkbox] {
                     transform: translateX(-50%);
                 }
             }
+            &_caption,
+            &_img {
+                position: absolute;
+                transition: all .8s;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
             .info {
-                max-height: 0;
+                opacity: 0;
                 overflow: hidden;
                 padding: 0 10%;
                 box-sizing: border-box;
-                transition: max-height 1.5s ease-out;
+                transition: all .8s ease-out;
                 .brand-rooms {
                     position: relative;
                     margin-top: 50px;
@@ -178,8 +186,13 @@ input[type=checkbox] {
                 opacity: .3;
             }
             .category-block_description {
+                &_caption,
+            &_img {
+                top: 0;
+                transform: translate(-50%, -100%);
+            }
                 .info {
-                    max-height: 20vw;
+                    opacity: 1;
                 }
             }
         }
@@ -282,6 +295,10 @@ input[type=checkbox] {
     font-size: 1.875rem;
     font-family: Aquinas;
     text-transform: uppercase;
+}
+
+.ymaps-2-1-65-ground-pane {
+    filter: grayscale(100%);
 }
 
 .header {
