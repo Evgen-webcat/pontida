@@ -124,3 +124,13 @@ li.slick-active button::after {
     background-color: #fff;
     opacity: 1;
 }
+
+@media (max-width: 1080px) {
+    .slick-prev {
+    left: 1%;
+}
+
+.slick-next {
+    right: 1%;
+}
+}

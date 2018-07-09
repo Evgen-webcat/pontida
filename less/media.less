@@ -84,7 +84,7 @@
                 width: 100%;
             }
         }
-        .brand-header {
+        .page-header {
             padding: 120px 5% 50px;
         }
     }
@@ -102,8 +102,7 @@
                 padding: 30px 0;
                 width: 100%;
                 text-align: center;
-                background-color: #2f2d2c;
-                box-shadow: 0 0 5px rgba(0, 0, 0, .7);
+                background-color: rgba(47, 47, 47, 0.9);
                 li {
                     display: block;
                     margin-right: 0;
@@ -133,6 +132,43 @@
             &_content {
                 &_caption {
                     font-size: 3rem;
+                }
+            }
+        }
+        .product {
+            display: flex;
+            flex-direction: column-reverse;
+            &_slider {
+                width: 100%;
+                height: 450px;
+                &_block {
+                    &_img {
+                        height: 450px;
+                    }
+                }
+            }
+            &_description {
+                display: flex;
+                align-items: center;
+                padding: 100px 3% 30px;
+                width: 100%;
+                &_block {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                }
+                &_brand {
+                    margin-top: 0;
+                }
+                &_style {
+                    margin-top: 5px;
+                }
+                &_link {
+                    margin-top: 10px;
+                }
+                &_button {
+                    margin-top: 10px;
                 }
             }
         }
@@ -231,13 +267,28 @@
         .info_blocks {
             .info_block {
                 &_img {
+                    margin: 0 0 1px;
                     width: 100%;
                     height: 50vw;
                 }
                 &_description {
+                    margin: 0;
                     padding: 50px 5%;
                     width: 100%;
                     height: 50vw;
+                }
+                &:nth-of-type(2n) {
+                    .info_block_img {
+                        margin: 0 0 1px;
+                        width: 100%;
+                        height: 50vw;
+                    }
+                    .info_block_description {
+                        margin: 0;
+                        padding: 50px 5%;
+                        width: 100%;
+                        height: 50vw;
+                    }
                 }
             }
         }
@@ -287,7 +338,15 @@
                 &_description {
                     height: auto;
                 }
+                &:nth-of-type(2n) {
+                    .info_block_description {
+                        height: auto;
+                    }
+                }
             }
+        }
+        .product_slider-nav_block_img {
+            height: 150px;
         }
     }
 }
@@ -305,12 +364,22 @@
         .slider_content {
             top: 100px;
         }
-
         .contacts-imgs {
             .contacts-img {
                 width: 100%;
                 height: 75vw;
             }
+        }
+        .product {
+            &_slider {
+                height: 300px;
+                &_block_img {
+                    height: 300px;
+                }
+            }
+        }
+        .product_slider-nav {
+            display: none;
         }
     }
     .footer {
@@ -335,6 +404,23 @@
     .main {
         .info-block_caption {
             font-size: 2rem;
+        }
+        .product {
+            &_description {
+                text-align: center;
+                &_block {
+                    display: block;
+                }
+                &_brand {
+                    margin-top: 15px;
+                }
+                &_link {
+                    margin-top: 15px;
+                }
+                &_button {
+                    margin: 15px auto 0;
+                }
+            }
         }
     }
     .footer {
