@@ -125,6 +125,7 @@ input[type=checkbox] {
                 }
             }
             &_img {
+                max-width: 200px;
                 max-height: 120px;
             }
             &_caption,
@@ -170,6 +171,9 @@ input[type=checkbox] {
                 }
                 .style {
                     margin-top: 30px;
+                    &_name {
+                        text-transform: lowercase;
+                    }
                 }
                 .brand {
                     margin-top: 10px;
@@ -302,7 +306,7 @@ input[type=checkbox] {
     text-transform: uppercase;
 }
 
-.ymaps-2-1-65-ground-pane {
+.ymaps-2-1-66-ground-pane {
     filter: grayscale(100%);
 }
 
@@ -671,6 +675,10 @@ input[type=checkbox] {
             object-fit: cover;
             opacity: .5;
         }
+        &_logo {
+            width: auto;
+            max-width: 280px;
+        }
         &_description {
             position: relative;
             &_caption {
@@ -735,7 +743,7 @@ input[type=checkbox] {
             color: #2f2f2f;
             background-color: #c2cbd2;
             &_caption {
-                font-size: 2.25rem;
+                font-size: 1.7rem;
                 font-family: Montserrat-Bold;
             }
             &_disigner {

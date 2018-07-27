@@ -115,7 +115,7 @@ eval("$(document).ready(function () {\n    $('.filter_button').click(function (e
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {\n    var mapBlock = document.getElementById('map');\n\n    if (mapBlock) {\n    ymaps.ready(init);\n    var map,\n        Placemark;\n\n    function init() {\n        map = new ymaps.Map(\"map\", {\n            center: [53.92507307064044,27.60454599999995],\n            zoom: 17\n        });\n\n        Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], {\n            hintContent: 'Pontida',\n            balloonContent: 'Pontida'\n        }, {\n            iconLayout: 'default#image',\n            iconImageHref: 'img/placemark.png',\n            iconImageSize: [18, 24]\n        });\n\n         map.geoObjects.add(Placemark);\n    }\n}\n});\n\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
+eval("$(document).ready(function () {\n    var mapBlock = document.getElementById('map');\n\n    if (mapBlock) {\n    ymaps.ready(init);\n    var map,\n        Placemark;\n\n    function init() {\n        map = new ymaps.Map(\"map\", {\n            center: [53.92507307064044,27.60454599999995],\n            zoom: 17\n        });\n        \n        map.behaviors.disable('scrollZoom');\n\n        Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], {\n            hintContent: 'Pontida',\n            balloonContent: 'Pontida'\n        }, {\n            iconLayout: 'default#image',\n            iconImageHref: 'img/placemark.png',\n            iconImageSize: [18, 24]\n        });\n\n         map.geoObjects.add(Placemark);\n    }\n}\n});\n\n\n//# sourceURL=webpack:///./js/app/ymaps.js?");
 
 /***/ }),
 

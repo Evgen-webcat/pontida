@@ -12,6 +12,8 @@ $(document).ready(function () {
             zoom: 17
         });
 
+        map.behaviors.disable('scrollZoom');
+
         Placemark = new ymaps.Placemark([53.92507307064044,27.60454599999995], {
             hintContent: 'Pontida',
             balloonContent: 'Pontida'
