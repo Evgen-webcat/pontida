@@ -38,7 +38,7 @@ input[type=checkbox] {
         left: 4px;
         width: 8px;
         height: 8px;
-        background-image: url(../img/checked.png);
+        background-image: url(img/checked.png);
     }
 }
 
@@ -126,7 +126,7 @@ input[type=checkbox] {
             }
             &_img {
                 max-width: 200px;
-                max-height: 120px;
+                max-height: 100px;
             }
             &_caption,
             &_img {
@@ -283,11 +283,9 @@ input[type=checkbox] {
             font-family: Montserrat-SemiBold;
             text-transform: uppercase;
             border-bottom: 1px solid rgba(0, 0, 0, .1);
-            .label {
-                margin-left: 10px;
-            }
-            .checkbox {
+            input[type=checkbox] {
                 transform: translateY(2px);
+                margin-right: 10px;
             }
         }
     }
@@ -306,7 +304,7 @@ input[type=checkbox] {
     text-transform: uppercase;
 }
 
-.ymaps-2-1-66-ground-pane {
+.ymaps-2-1-68-ground-pane{
     filter: grayscale(100%);
 }
 
@@ -737,7 +735,7 @@ input[type=checkbox] {
         &_description {
             display: flex;
             align-items: center;
-            padding: 70px 0 0 30px;
+            padding: 70px 20px 0 30px;
             box-sizing: border-box;
             width: ~"calc(25% - 1px)";
             color: #2f2f2f;
@@ -763,7 +761,7 @@ input[type=checkbox] {
                 margin-top: 5px;
             }
             &_link {
-                margin-top: 120px;
+                margin-top: 50px;
                 display: block;
                 color: #2f2f2f;
                 font-size: .812rem;
@@ -800,6 +798,7 @@ input[type=checkbox] {
                 width: 100%;
                 height: 250px;
                 object-fit: cover;
+                transition: opacity .8s;
                 &:hover {
                     opacity: .5;
                 }
@@ -1089,6 +1088,39 @@ input[type=checkbox] {
             }
         }
     }
+}
+
+.spin {
+    display: none;
+    height: 90px;
+    line-height: 90px;
+}
+
+.spinner {
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(47,47,47,0.9);
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 }
 
 @import "media";
